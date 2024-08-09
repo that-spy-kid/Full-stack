@@ -8,11 +8,11 @@ const port = 4000;
 
 // PostgreSQL connection pool
 const pool = new Pool({
-  user: 'avnadmin',
-  host: 'admin-db-mypersonaldata-3b79.l.aivencloud.com',
-  database: 'defaultdb',
-  password: 'AVNS_ljrr_22I3DL1mQ5WrYg',
-  port: 16835,
+  user: 'dbuser',
+  host: 'myhost',
+  database: 'postgres',
+  password: 'postgres',
+  port: 5432,
   ssl: {
     rejectUnauthorized: false // Change to true if you have a trusted certificate
   }
