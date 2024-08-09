@@ -38,21 +38,7 @@ app.post('/api/credit-cards', async (req, res) => {
     const { name, bank, enabled } = req.body;
     try {
         console.log('post Api called');
-      // Find the smallest ID where deleted = true
-    //   const idResult = await pool.query(
-    //     'SELECT id FROM credit_cards WHERE deleted = true ORDER BY id LIMIT 1'
-    //   );
-      
       let id;
-    //   if (idResult.rows.length > 0) {
-    //     id = idResult.rows[0].id;
-    //     // Mark it as not deleted
-    //     await pool.query('UPDATE credit_cards SET deleted = false WHERE id = $1', [id]);
-    //   } else {
-    //     // Get the next ID from the sequence
-    //     id = await pool.query('SELECT nextval(\'credit_card_id_seq\') AS id');
-    //     id = id.rows[0].id;
-    //   }
       id = await pool.query('SELECT nextval(\'credit_card_id_seq\') AS id');
       id = id.rows[0].id;
 
