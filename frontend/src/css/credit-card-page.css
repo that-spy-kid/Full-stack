@@ -1,0 +1,329 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    background-color: #ffffff; 
+  }
+  
+  .title {
+    font-size: 24px; /* Adjust font size to fit well */
+    color: #eb244f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-container {
+    position: relative; /* Position the icon inside the container */
+    padding-left: 140px;
+  }
+  
+  .search-bar {
+    padding: 10px 40px 10px 16px; /* Extra space on the right for the icon */
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none; /* Removes the default focus outline */
+    transition: all 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .search-bar:focus {
+    border-color: #007BFF; /* Border color on focus */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); /* Shadow color on focus */
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 12px; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%); /* Centers the icon vertically */
+    font-size: 18px; /* Adjust size as needed */
+    color: #aaa; /* Icon color */
+    pointer-events: none; /* Prevents icon from interfering with clicks */
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none; /* Removes default border */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Text color */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .add-button:active {
+    background-color: #004494; /* Even darker shade on click */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Shadow effect on click */
+  }  
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #000000; /* Outer border around the table */
+    overflow: visible;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #000000; /* Horizontal lines between rows */
+    border-right: 1px solid #000000; /* Vertical lines between columns */
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+  }
+  
+  .table tr:last-child td {
+    border-bottom: none; /* Removes the bottom border of the last row */
+  }
+  
+  .table th:last-child,
+  .table td:last-child {
+    border-right: none; /* Removes the right border of the last column */
+  }
+  
+  
+  
+  .edit-button {
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover {
+    background-color: #e0a800;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  /* Modal backdrop */
+  .modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Show the modal */
+  .modal-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hide the modal */
+  .modal-hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* When modal is visible, animate content */
+  .modal-show .modal-content {
+    transform: translateY(0);
+  }
+  
+  /* Close button inside the modal */
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-button:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+  .actions-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style for the options button that triggers the menu */
+.options-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* Larger font size for better visibility */
+  color: #333; /* Darker color for better contrast */
+  cursor: pointer;
+  font-weight: bolder;
+  position: relative;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.options-button:hover {
+  color: #0a7fed; /* Color change on hover */
+}
+
+/* Style for the options menu container */
+.options-menu {
+  position: absolute;
+  background-color: #fff; /* White background for a clean look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for more depth */
+  border-radius: 10px; /* More rounded corners */
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  width: 100px; /* Fixed width for consistency */
+  overflow: hidden; /* Hide overflow to keep corners rounded */
+}
+
+/* Style for each button in the options menu */
+.options-menu button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 10px 10px; /* More padding for a better touch target */
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; /* Larger font size for better readability */
+  color: #333; /* Dark color for text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Hover effect for buttons in the options menu */
+.options-menu button:hover {
+  background-color: #0a7bed; /* Highlight background color */
+  color: #fff; /* White text color for contrast */
+}
+
+/* Optional: Add a subtle border to buttons for better visual separation */
+.options-menu button:not(:last-child) {
+  border-bottom: 1px solid #ddd; /* Light border to separate buttons */
+}
+
+
+  /* Style the container of the checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+/* Style the checkbox itself */
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none; /* Remove default appearance for WebKit browsers */
+  -moz-appearance: none; /* Remove default appearance for Firefox */
+  appearance: none; /* Remove default appearance for other browsers */
+  width: 20px; /* Width of the checkbox */
+  height: 20px; /* Height of the checkbox */
+  border: 2px solid #007BFF; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove default focus outline */
+  position: relative; /* Positioning for pseudo-elements */
+  background-color: #fff; /* Background color */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition effects */
+}
+
+/* Style the checkbox when checked */
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #007BFF; /* Background color when checked */
+  border-color: #007BFF; /* Border color when checked */
+}
+
+/* Create a custom checkmark */
+.checkbox-container input[type="checkbox"]:checked::before {
+  content: "✓"; /* Checkmark symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the checkmark */
+  font-size: 14px; /* Size of the checkmark */
+  color: #fff; /* Checkmark color */
+}
+
+  
+  
+  
